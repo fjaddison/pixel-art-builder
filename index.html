@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>pixel art builder</title>
+</head>
+<body>
+
+    <div class="root">
+        <svg id="the-svg" class="svg-root" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg"></svg>
+        <div class="palette" style="width: 150px; height: 300px; background: rgba(0,0,0,0.1);">
+            your palette
+            <input type="color" id="color1" name="color1">
+            <input type="color" id="color2" name="color2">
+            <input type="color" id="color3" name="color3">
+            <input type="color" id="color4" name="color4">
+        </div>
+        <div class="active-color-box">
+            active color
+            <div class="color-choice-circle"></div>
+        </div>
+        <div id="buttons-box">
+            <div id="clear-btn" class="button-std">clear pixel board</div>
+            <div id="download-btn" class="button-std">download pixel board as png</div>
+        </div>
+    </div>
+
+    <canvas id="canvas"></canvas>
+
+    <script src="app.js"></script>
+    <script src="download-canvas.js"></script>
+</body>
+</html>
