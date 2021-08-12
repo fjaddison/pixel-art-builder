@@ -1,1 +1,2 @@
-# pixel-art-builder
+# Pixel Art Builder
+A tool made with HTML, CSS, and JavaScript to build pixel art. User can make a palette individually change colors of the svg elements on a 30x30 grid. Whatever is displayed on the svg grid can be downloaded as an image by the user.

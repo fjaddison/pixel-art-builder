@@ -1,8 +1,8 @@
 const root = document.querySelector('svg')
 
-var pixelBoardDimensions = 25
+var pixelBoardDimensions = 32
 
-const colors = ['#2B2723', '#DEDBD3', '#646360', '#ABA9A2']
+const colors = ['#18470C', '#319C28', '#DEB03B', '#D68431', '#BB422B', '#4F210F', '#FFD79F', '#FFFFFF', '#000000']
 
 var colorIndex = 0
 var colorChoice = colors[colorIndex]
@@ -24,11 +24,12 @@ svgContainer.setAttribute('class', 'download-container')
 
 for (i = 0; i < Math.pow(pixelBoardDimensions, 2); i++) {
     let pixel = document.createElementNS('http://www.w3.org/2000/svg', 'rect')
-    pixel.setAttribute('x', x);
-    pixel.setAttribute('y', y);
-    pixel.setAttribute('width', '3');
-    pixel.setAttribute('height', '3');
-    pixel.setAttribute('fill', colors[randMatrix[i]]);
+    pixel.setAttribute('x', x)
+    pixel.setAttribute('y', y)
+    pixel.setAttribute('width', '3')
+    pixel.setAttribute('height', '3')
+    pixel.setAttribute('fill', '#FFD79F')
+    // pixel.setAttribute('fill', colors[randMatrix[i]])
     x += 3
     if (x == pixelBoardDimensions * 3) {
         x = 0
@@ -80,7 +81,8 @@ pixels.forEach(x => {
 const clearButton = document.querySelector('#clear-btn')
 
 clearButton.addEventListener('click', _ => {
-    pixels.forEach(p => p.setAttribute('fill', 'rgb(245,245,245'))
+    // pixels.forEach(p => p.setAttribute('fill', colors[0]))
+    pixels.forEach(p => p.setAttribute('fill', '#FFD79F'))
 })
 
 document.body.addEventListener('keydown', e => {
